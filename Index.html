@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Budget Tracker & Visualizer</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Budget Tracker & Visualizer</h1>
+
+<div class="card">
+<h3>Set Budget Limit</h3>
+
+<input type="number"
+id="budgetLimit"
+placeholder="Enter Budget Limit">
+
+<button onclick="setBudget()">
+Set Budget
+</button>
+</div>
+
+<div class="card">
+<h3>Add Income</h3>
+
+<input type="number"
+id="incomeInput"
+placeholder="Enter Income">
+
+<button onclick="addIncome()">
+Add Income
+</button>
+</div>
+
+<div class="card">
+<h3>Add Expense</h3>
+
+<input type="text"
+id="expenseName"
+placeholder="Expense Name">
+
+<input type="number"
+id="expenseAmount"
+placeholder="Expense Amount">
+
+<button onclick="addExpense()">
+Add Expense
+</button>
+</div>
+
+<div class="card">
+<button onclick="resetData()">
+Reset All Data
+</button>
+</div>
+
+<div class="summary">
+
+<h3>
+Budget Limit:
+₹<span id="budget">0</span>
+</h3>
+
+<h3>
+Total Income:
+₹<span id="income">0</span>
+</h3>
+
+<h3>
+Total Expenses:
+₹<span id="expenses">0</span>
+</h3>
+
+<h3>
+Balance:
+₹<span id="balance">0</span>
+</h3>
+
+</div>
+
+<h3>Budget Usage</h3>
+
+<div class="progress-container">
+<div id="progressBar"></div>
+</div>
+
+<p id="warning"></p>
+
+<h3>Expense History</h3>
+
+<ul id="expenseList"></ul>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
